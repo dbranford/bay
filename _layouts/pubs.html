@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+
+<body>
+{% include header.html %}
+
+<div class="page-content">
+  <div class="wrapper">
+    {{ content }}
+    {%- if site.data.pubs %}
+    <ol reversed="reversed">
+      {%- assign sorted_pubs = site.data.pubs | sort: 'date' | reverse %}
+      {%- for pub in sorted_pubs %}
+      <li>
+        <em>{{ pub.title }}</em>
+        {{ pub.author }}
+        <a href=https://doi.org/{{ pub.doi }}>
+        {{ pub.journal }}
+        <span style="font-weight:bold">{{ pub.volume }}</span>
+        {{ pub.page }}
+        ({{ pub.year }})
+        </a>
+      </li>
+      {%- endfor %}
+    </ol>
+    {%- endif %}
+  </div>
+</div>
+
+{% include footer.html %}
+
+{% include foot.html %}
+</body>
+</html>
