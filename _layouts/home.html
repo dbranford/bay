@@ -7,11 +7,13 @@
 <div class="page-content">
   <div class="wrapper">
     <div class="home">
+      {%- if page.profile_picture %}
       <img
         src="{{ page.profile_picture.src | absolute_url }}"
         alt="{{ page.profile_picture.alt }}"
         class="profile-pic"
       />
+      {%- endif %}
       {{ content }}
     </div>
   </div>
