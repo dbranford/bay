@@ -18,6 +18,8 @@ header:
 
 footer:
   show_powered_by: true
+  contact_head: CONTACT
+  follow_head: FOLLOW
   contact:
     - name: Email
       value: yourmail@domain.com
