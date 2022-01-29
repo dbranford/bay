@@ -57,6 +57,9 @@ exclude:
   - gemfiles/
   - Gemfile
   - Gemfile.lock
+  - CHANGELOG.md
+  - LICENSE.md
+  - README.md
   - vendor/bundle/
   - vendor/cache/
   - vendor/gems/
